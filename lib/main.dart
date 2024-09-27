@@ -8,6 +8,7 @@ import 'package:marketplace/repositories/user_impl.dart';
 import 'package:marketplace/ui/login.dart';
 import 'package:marketplace/ui/product_details.dart';
 import 'package:marketplace/ui/products.dart';
+
 import 'package:marketplace/ui/splash.dart';
 
 void main() => runApp(const MarketPlaceApp());
