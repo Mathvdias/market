@@ -23,7 +23,7 @@ class ProductSearch extends SearchDelegate<Product?> {
     return IconButton(
       icon: const Icon(Icons.arrow_back),
       onPressed: () {
-        close(context, null); 
+        close(context, null);
       },
     );
   }
@@ -35,10 +35,12 @@ class ProductSearch extends SearchDelegate<Product?> {
     }).toList();
 
     return ListView.builder(
+      key: UniqueKey(),
       itemCount: results.length,
       itemBuilder: (context, index) {
         final product = results[index];
         return ListTile(
+          key: ValueKey(index),
           title: Text(product.name),
           subtitle: Text(product.brand),
           onTap: () {
@@ -60,15 +62,17 @@ class ProductSearch extends SearchDelegate<Product?> {
     }).toList();
 
     return ListView.builder(
+      key: UniqueKey(),
       itemCount: suggestions.length,
       itemBuilder: (context, index) {
         final product = suggestions[index];
         return ListTile(
+          key: ValueKey(index),
           title: Text(product.name),
           subtitle: Text(product.brand),
           onTap: () {
             query = product.name;
-            showResults(context); 
+            showResults(context);
           },
         );
       },

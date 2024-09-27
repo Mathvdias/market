@@ -45,16 +45,25 @@ class _LoginPageState extends State<LoginPage> {
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            const Hero(
+              tag: 'market',
+              child: Icon(
+                Icons.store,
+                size: 100,
+                color: Colors.blueAccent,
+              ),
+            ),
             TextField(
               controller: _emailController,
-              decoration: const InputDecoration(labelText: "Email"),
+              decoration: const InputDecoration(labelText: "E-mail"),
             ),
             TextField(
               controller: _passwordController,
               obscureText: _obscurePassword,
               decoration: InputDecoration(
-                labelText: "Password",
+                labelText: "Senha",
                 suffixIcon: IconButton(
                   icon: Icon(
                     _obscurePassword ? Icons.visibility : Icons.visibility_off,
