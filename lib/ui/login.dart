@@ -29,8 +29,11 @@ class _LoginPageState extends State<LoginPage> {
     if (!mounted) return;
 
     if (user != null) {
-      Navigator.pushReplacementNamed(context, '/products',
-          arguments: user.name);
+      Navigator.pushReplacementNamed(
+        context,
+        '/products',
+        arguments: user.name,
+      );
     } else {
       setState(() {
         _errorMessage = "Usuário ou senha incorretos.";
