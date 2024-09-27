@@ -1,0 +1,53 @@
+# Flutter/Dart/Pub related
+.dart_tool/
+.packages
+.pub/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-plugins-dependencies.lock
+.flutter-versions
+.pub-cache/
+.pub-cache/
+.flutter-plugins-dependencies.lock
+
+# Android related
+android/.gradle/
+android/.idea/
+android/app/*.iml
+android/local.properties
+android/app/proguard-rules.pro
+android/app/*.keystore
+android/key.properties
+
+# iOS related
+ios/Flutter/.last_build_id
+ios/Flutter/flutter_export_environment.sh
+ios/Podfile.lock
+ios/Pods/
+ios/.symlinks/
+ios/Runner.xcworkspace/
+ios/Flutter/Generated.xcconfig
+ios/Flutter/flutter_export_environment.sh
+ios/Flutter/App.framework
+ios/Flutter/Flutter.framework
+ios/Flutter/flutter_export_environment.sh
+ios/Flutter/.last_build_id
+ios/Flutter/Generated.xcconfig
+ios/.generated
+
+# Web related
+web/.dart_tool/
+web/.packages
+web/.flutter-plugins
+web/.flutter-plugins-dependencies
+web/.flutter-versions
+
+# Miscellaneous
+**/Thumbs.db
+**/.DS_Store
+
+# IDEs
+.idea/
+*.iml
+.vscode/
