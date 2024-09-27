@@ -33,12 +33,12 @@ class _MarketPlaceAppState extends State<MarketPlaceApp> {
           themeMode: themeMode,
           title: 'Marketplace',
           theme: ThemeData(
-            primarySwatch: Colors.blue,
+            primarySwatch: Colors.yellow,
             brightness: Brightness.light,
           ),
           darkTheme: ThemeData(
             brightness: Brightness.dark,
-            primarySwatch: Colors.blue,
+            primarySwatch: Colors.yellow,
           ),
           initialRoute: '/',
           routes: {
