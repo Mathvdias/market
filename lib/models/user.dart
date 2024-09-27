@@ -5,7 +5,7 @@ class User {
 
   User({required this.name, required this.email, required this.password});
 
-  factory User.fromJson(Map<String, dynamic> json) {
+  factory User.fromJson(json) {
     return User(
       name: json['name'],
       email: json['email'],

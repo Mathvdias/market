@@ -190,36 +190,46 @@ class _ProductPageState extends State<ProductPage>
                               delegate: SliverChildBuilderDelegate(
                                 (context, index) {
                                   final product = products[index];
-                                  return GestureDetector(
-                                    onTap: () {
-                                      Navigator.pushNamed(
-                                        context,
-                                        '/product_details',
-                                        arguments: product,
-                                      );
-                                    },
-                                    child: Card(
-                                      child: Column(
-                                        children: [
-                                          const Expanded(
-                                            child: Icon(
-                                              Icons.image,
-                                              color: Colors.grey,
-                                              size: 50,
-                                            ),
+                                  return Card(
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(12),
+                                      child: Material(
+                                        color: Colors.transparent,
+                                        child: InkWell(
+                                          onTap: () {
+                                            Navigator.pushNamed(
+                                              context,
+                                              '/product_details',
+                                              arguments: product,
+                                            );
+                                          },
+                                          child: Column(
+                                            children: [
+                                              const Expanded(
+                                                child: Icon(
+                                                  Icons.image,
+                                                  color: Colors.grey,
+                                                  size: 50,
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.all(8.0),
+                                                child: Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(product.name),
+                                                    Text(product.brand),
+                                                  ],
+                                                ),
+                                              ),
+                                            ],
                                           ),
-                                          Padding(
-                                            padding: const EdgeInsets.all(8.0),
-                                            child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Text(product.name),
-                                                Text(product.brand),
-                                              ],
-                                            ),
-                                          ),
-                                        ],
+                                        ),
                                       ),
                                     ),
                                   );

@@ -10,9 +10,7 @@ import 'package:marketplace/ui/product_details.dart';
 import 'package:marketplace/ui/products.dart';
 import 'package:marketplace/ui/splash.dart';
 
-void main() {
-  runApp(const MarketPlaceApp());
-}
+void main() => runApp(const MarketPlaceApp());
 
 class MarketPlaceApp extends StatefulWidget {
   const MarketPlaceApp({super.key});
@@ -29,7 +27,7 @@ class _MarketPlaceAppState extends State<MarketPlaceApp> {
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder<ThemeMode>(
-      valueListenable: themeController, // Escuta as mudanças do tema
+      valueListenable: themeController,
       builder: (context, themeMode, child) {
         return MaterialApp(
           themeMode: themeMode,

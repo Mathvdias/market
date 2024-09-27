@@ -19,7 +19,7 @@ class Product {
     required this.description,
   });
 
-  factory Product.fromJson(Map<String, dynamic> json) {
+  factory Product.fromJson(json) {
     return Product(
       name: json['name'],
       brand: json['brand'],
